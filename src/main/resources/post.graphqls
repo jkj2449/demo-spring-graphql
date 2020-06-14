@@ -1,0 +1,23 @@
+schema {
+    query: Query
+}
+
+type Query {
+    allPosts: [PostListResponseDto]
+    post(id: Long!): PostResponseDto
+}
+
+type PostResponseDto {
+    id: Long!
+    title: String!
+    content: String!
+    author: String!
+}
+
+type PostListResponseDto {
+    id: Long!
+    title: String!
+    content: String!
+    author: String!
+    modifiedDate: String!
+}
